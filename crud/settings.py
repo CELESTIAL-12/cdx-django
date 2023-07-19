@@ -52,11 +52,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'playground',
     'aapi',
     'corsheaders',
     'rest_framework',
-    'sql_demo'
+    'sql_demo',
+    'chat'
     
 ]
 

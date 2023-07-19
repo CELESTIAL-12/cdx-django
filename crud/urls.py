@@ -19,19 +19,23 @@ from rest_framework import routers
 from django.urls import path, include
 from django.urls import include, path
 from rest_framework import routers
-from aapi import views
+from aapi import views 
+#from chat import views 
+#import aapi
+#import chat
 
 router = routers.DefaultRouter()
 router.register(r'movies', views.MovieViewSet)
+#router.register(r'api/generate/', views.generate_response)
 
 
 #playground/hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('playground/', include('playground.urls')),
-    path('', include(router.urls)),
+    #path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/',include('chat.urls'), name='generate_response'),
     path('demo/',include('sql_demo.urls'))
 ]
 
